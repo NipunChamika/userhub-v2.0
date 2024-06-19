@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'users',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'Password',
+        'PASSWORD': 'N1pun$',
     }
 }
 
