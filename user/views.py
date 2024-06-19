@@ -38,3 +38,14 @@ def user_update(request, pk):
         form = UserForm(instance=user)
 
     return render(request, 'user_update.html', {'form': form})
+
+
+def user_delete(request, pk):
+    try:
+        user = get_object_or_404(User, pk=pk)
+        user.delete()
+        messages.success(request, 'User deleted successfully!')
+    except Http404:
+        messages.error(request, 'User does not exist.')
+
+    return redirect('user_list')
